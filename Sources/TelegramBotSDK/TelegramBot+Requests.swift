@@ -46,15 +46,15 @@ extension TelegramBot {
       if (rawResult as? TResult?) != nil {
           resultValid = true
       }
-      if endpoint == "getFile" {
+      //if endpoint == "getFile" {
         DispatchQueue.global().async {
           completion?(resultValid ? rawResult as! TResult? : nil, error)
         }
-      }  else {
-        queue.async() {
-          completion?(resultValid ? rawResult as! TResult? : nil, error)
-        }
-      }
+//      }  else {
+//        queue.async() {
+//          completion?(resultValid ? rawResult as! TResult? : nil, error)
+//        }
+//      }
     }
 	}
 	
